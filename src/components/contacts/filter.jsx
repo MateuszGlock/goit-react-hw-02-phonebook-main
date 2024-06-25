@@ -1,5 +1,6 @@
 import { nanoid } from "nanoid";
 import styles from "./Contacts.module.scss";
+import PropTypes from "prop-types";
 
 const Filter = ({ filter, onChange }) => {
   const searchId = nanoid();
@@ -16,4 +17,9 @@ const Filter = ({ filter, onChange }) => {
     </div>
   );
 };
+Filter.propTypes = {
+  filter: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
+
 export default Filter;
